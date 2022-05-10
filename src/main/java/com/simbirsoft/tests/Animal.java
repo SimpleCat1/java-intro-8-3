@@ -1,4 +1,4 @@
-package simbirsoft.com;
+package com.simbirsoft.tests;
 
 public abstract class Animal {
     public int year = 21;

@@ -1,4 +1,4 @@
-package simbirsoft.com;
+package com.simbirsoft.tests;
 
 public class Person extends Animal {
     protected String text;
