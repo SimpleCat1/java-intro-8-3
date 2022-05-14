@@ -1,17 +1,35 @@
 package com.simbirsoft.tests;
 
-public abstract class Animal {
-    public int year = 21;
+import java.util.ArrayList;
 
-    public void setYear(int year) {
+public abstract class Animal {
+    protected int year;
+    protected String text;
+    ArrayList<String> partsOfExistence = new ArrayList<>();
+
+    protected Animal(String text, int year){
+        this.text=text;
+        this.year=year;
+        partsOfExistence.add("Голова");
+        partsOfExistence.add("Туловище");
+    }
+    protected Animal(){
+        this.text="Мяу";
+        this.year=17;
+
+        partsOfExistence.add("Голова");
+        partsOfExistence.add("Туловище");
+    }
+
+    protected void setYear(int year) {
         this.year = year;
     }
 
-    public int getYear() {
+    protected int getYear() {
         return this.year;
     }
 
-    public void animalSay() {
-        System.out.println("Мяуууу");
+    protected void animalSay() {
+        System.out.println(text);
     }
 }
