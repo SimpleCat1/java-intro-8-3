@@ -4,18 +4,19 @@ import java.util.ArrayList;
 
 public abstract class Animal {
     protected int year;
-    protected String text;
+    protected String textForSound;
     ArrayList<String> partsOfExistence = new ArrayList<>();
 
-    protected Animal(String text, int year){
-        this.text=text;
-        this.year=year;
+    protected Animal(String text, int year) {
+        this.textForSound = text;
+        this.year = year;
         partsOfExistence.add("Голова");
         partsOfExistence.add("Туловище");
     }
-    protected Animal(){
-        this.text="Мяу";
-        this.year=17;
+
+    protected Animal() {
+        this.textForSound = "Мяу";
+        this.year = 17;
 
         partsOfExistence.add("Голова");
         partsOfExistence.add("Туловище");
@@ -29,7 +30,7 @@ public abstract class Animal {
         return this.year;
     }
 
-    protected void animalSay() {
-        System.out.println(text);
+    protected void makeASound() {
+        System.out.println(textForSound);
     }
 }
